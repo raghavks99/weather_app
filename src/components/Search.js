@@ -27,6 +27,7 @@ function Search({ onSearchChange }) {
         return fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${cityName}`, geo_api_options)
         .then(response => response.json())
         .then(response => {
+          response.cityName = cityName;
             setCity('');
               console.log(response)
               document.getElementById("cityName").innerHTML = response.cityName;
