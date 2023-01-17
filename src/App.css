@@ -21,6 +21,7 @@
 }
 
 .button {
+  padding:1px;
   text-align: center;
   display : inline-block;
   text-decoration: none;
@@ -47,6 +48,8 @@ button[type=submit]:hover {
 .search-bar {
   border-radius: 15px;
   border:none;
+  margin:10px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -54,6 +57,28 @@ button[type=submit]:hover {
   display: flex;
   justify-content: center;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.flex-item1 {
+  display: flex;
+  flex-direction: column;
+  margin:10px;
+  padding:10px;
+}
+
+.flex-item2 {
+  display : flex;
+  flex-direction: column;
+  margin:10px;
+  padding:10px;
+}
+
 
 
  
