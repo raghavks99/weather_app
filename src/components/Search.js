@@ -46,7 +46,7 @@ function Search({ onSearchChange }) {
   return (
     <>
       <div className='input-button'>
-        <input className='search-bar' placeholder='City Name' value={cityName} onChange={handleInput}></input>
+        <input type = 'input' className='search-bar' placeholder='City Name' value={cityName} onChange={handleInput}></input>
         <button onClick={(cityName) ? loadData : ' '} className="button" type="submit">Search</button>
       </div>
       <div className='weather-content'>

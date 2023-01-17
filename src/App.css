@@ -6,10 +6,13 @@
   height :400px;
   padding: 20px;
   border-radius: 20px;
-  background: dodgerblue linear-gradient(22deg, aqua, dodgerblue, deeppink)
+  background-image: url("beach.jpg");
+  background-position: center;
+  background-size:100%;
+  background-repeat: no-repeat;
 }
 .main {
-  background-color: yellow;
+  background: dodgerblue linear-gradient(22deg, aqua, dodgerblue, deeppink);
   height: 100vh;
   width: 100%;
   display:flex;
@@ -21,13 +24,15 @@
 }
 
 .button {
-  padding:1px;
+  padding:10px;
+  margin:4px 4px;
   text-align: center;
   display : inline-block;
   text-decoration: none;
   padding: 10px 10px;
-  background-color: red;
+  background-color:dodgerblue;
   border:none;
+  color:white;
   border-radius:10px;
   position: relative;
   box-shadow: inset 0 0 0 0 yellow;
@@ -39,12 +44,16 @@
 .weather-content {
   font-size: 1rem;
   color:white;
+  font-weight: bold;
 }
 
 button[type=submit]:hover {
   background-color: #45a049;
 }
 
+.search-bar[type=input]:focus {
+  border: 3px solid red;
+}
 .search-bar {
   border-radius: 15px;
   border:none;
