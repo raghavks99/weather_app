@@ -1,13 +1,15 @@
-
+.header {
+  color:white
+}
 .weather-app {
   width:500px;
   height :400px;
   padding: 20px;
   border-radius: 20px;
-  background-color: brown;
+  background: dodgerblue linear-gradient(22deg, aqua, dodgerblue, deeppink)
 }
 .main {
-  background-color: #badc58;
+  background-color: yellow;
   height: 100vh;
   width: 100%;
   display:flex;
@@ -22,14 +24,36 @@
   text-align: center;
   display : inline-block;
   text-decoration: none;
-  margin: 4px 2px;
   padding: 10px 10px;
   background-color: red;
-  border-radius: 15px;
+  border:none;
+  border-radius:10px;
+  position: relative;
+  box-shadow: inset 0 0 0 0 yellow;
+  transition : ease-out 0.1s;
+  font: size 1.6rem;
+  outline:none; 
+}
+
+.weather-content {
+  font-size: 1rem;
+  color:white;
 }
 
 button[type=submit]:hover {
   background-color: #45a049;
 }
+
+.search-bar {
+  border-radius: 15px;
+  border:none;
+  text-align: center;
+}
+
+.input-button {
+  display: flex;
+  justify-content: center;
+}
+
 
  
