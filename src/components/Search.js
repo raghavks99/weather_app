@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 // import SearchResult from './SearchResult'
+
 function Search({ onSearchChange }) {
   const [cityName, setCity] = useState("");
   let cityName1 = "";
@@ -20,7 +21,7 @@ function Search({ onSearchChange }) {
       'X-RapidAPI-Key': '176030f1f5msh6e05d2a1a6879edp160b4bjsn90969f4643ab',
       'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
     }
-  }
+  };
 
   const loadData = () => {
     return fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${cityName}`, geo_api_options)
@@ -28,7 +29,7 @@ function Search({ onSearchChange }) {
       .then(response => {
         response.cityName = cityName;
         setCity('');
-        console.log(response)
+        console.log(response);
         document.getElementById("cityName").innerHTML = response.cityName;
         document.getElementById("cloud_pct").innerHTML = "Cloud Precipitation : " + JSON.stringify(response.cloud_pct);
         document.getElementById("feels_like").innerHTML = "Feels Like :" + JSON.stringify(response.feels_like) + "°C";
@@ -46,7 +47,7 @@ function Search({ onSearchChange }) {
   return (
     <>
       <div className='input-button'>
-        <input type = 'input' className='search-bar' placeholder='City Name' value={cityName} onChange={handleInput}></input>
+        <input type ="input" className='search-bar' placeholder='City Name' value={cityName} onChange={handleInput}></input>
         <button onClick={(cityName) ? loadData : ' '} className="button" type="submit">Search</button>
       </div>
       <div className='weather-content'>
